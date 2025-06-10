@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Cá Nhân - Nguyễn Văn An</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      /* Reset và Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+
+      /* Container chính */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        overflow: hidden;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      /* Header Banner */
+      .banner {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 60px 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .banner::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>')
+          repeat;
+        animation: float 20s infinite linear;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        100% {
+          transform: translateY(-100px);
+        }
+      }
+
+      .banner-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .profile-info h1 {
+        font-size: 3em;
+        margin-bottom: 10px;
+        animation: slideInLeft 1s ease-out;
+      }
+
+      .profile-info .subtitle {
+        font-size: 1.3em;
+        opacity: 0.9;
+        margin-bottom: 15px;
+        animation: slideInLeft 1s ease-out 0.2s both;
+      }
+
+      .profile-info .description {
+        font-size: 1.1em;
+        opacity: 0.8;
+        animation: slideInLeft 1s ease-out 0.4s both;
+      }
+
+      /* Ảnh profile */
+      .profile-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 5px solid rgba(255, 255, 255, 0.3);
+        overflow: hidden;
+        animation: slideInRight 1s ease-out, pulse 2s infinite;
+        transition: transform 0.3s ease;
+      }
+
+      .profile-image:hover {
+        transform: scale(1.05);
+      }
+
+      .profile-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Animations */
+      @keyframes slideInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+        }
+        50% {
+          box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+        }
+      }
+
+      /* Navigation */
+      .navbar {
+        background: #2c3e50;
+        padding: 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .nav-list {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .nav-item {
+        flex: 1;
+      }
+
+      .nav-link {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 15px 20px;
+        text-align: center;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .nav-link::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+
+      .nav-link:hover::before {
+        left: 100%;
+      }
+
+      .nav-link:hover {
+        background: #34495e;
+        transform: translateY(-2px);
+      }
+
+      /* Main Content */
+      .main-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        padding: 40px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      /* Section Styles */
+      .section {
+        background: #f8f9fa;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: fadeInUp 0.6s ease-out;
+      }
+
+      .section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .section h2 {
+        color: #2c3e50;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #667eea;
+        position: relative;
+      }
+
+      .section h2 i {
+        margin-right: 10px;
+        color: #667eea;
+      }
+
+      /* Thông tin cá nhân */
+      .personal-info .info-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        padding: 10px;
+        background: white;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .personal-info .info-item:hover {
+        background: #667eea;
+        color: white;
+        transform: translateX(10px);
+      }
+
+      .personal-info .info-item i {
+        width: 20px;
+        margin-right: 15px;
+        color: #667eea;
+      }
+
+      .personal-info .info-item:hover i {
+        color: white;
+      }
+
+      /* Kỹ năng */
+      .skill-item {
+        margin-bottom: 20px;
+      }
+
+      .skill-name {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+        font-weight: 600;
+      }
+
+      .skill-bar {
+        height: 10px;
+        background: #e0e0e0;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+
+      .skill-progress {
+        height: 100%;
+        background: linear-gradient(90deg, #667eea, #764ba2);
+        border-radius: 5px;
+        transition: width 2s ease-in-out;
+        animation: skillLoad 2s ease-in-out;
+      }
+
+      @keyframes skillLoad {
+        from {
+          width: 0;
+        }
+      }
+
+      /* Dự án */
+      .project-item {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        border-left: 4px solid #667eea;
+        transition: all 0.3s ease;
+      }
+
+      .project-item:hover {
+        transform: translateX(10px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .project-title {
+        color: #2c3e50;
+        margin-bottom: 10px;
+        font-size: 1.2em;
+        font-weight: 600;
+      }
+
+      /* Contact Links */
+      .contact-links {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .contact-link {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 15px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+      }
+
+      .contact-link:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+      }
+
+      .contact-link i {
+        margin-right: 8px;
+      }
+
+      /* Edit Button */
+      .edit-btn {
+        background: #28a745;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 15px;
+      }
+
+      .edit-btn:hover {
+        background: #218838;
+        transform: translateY(-2px);
+      }
+
+      /* Modal cho form chỉnh sửa */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 2000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        animation: fadeIn 0.3s ease;
+      }
+
+      .modal-content {
+        background-color: white;
+        margin: 5% auto;
+        padding: 30px;
+        border-radius: 15px;
+        width: 80%;
+        max-width: 600px;
+        max-height: 80vh;
+        overflow-y: auto;
+        animation: slideDown 0.3s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .close:hover {
+        color: #000;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+        color: #2c3e50;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: #667eea;
+      }
+
+      .save-btn {
+        background: #667eea;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: all 0.3s ease;
+      }
+
+      .save-btn:hover {
+        background: #5a6fd8;
+        transform: translateY(-2px);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .banner-content {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .profile-info h1 {
+          font-size: 2em;
+        }
+
+        .profile-image {
+          width: 150px;
+          height: 150px;
+          margin-top: 20px;
+        }
+
+        .main-content {
+          grid-template-columns: 1fr;
+          padding: 20px;
+        }
+
+        .nav-list {
+          flex-direction: column;
+        }
+
+        .contact-links {
+          justify-content: center;
+        }
+      }
+
+      /* Full width sections */
+      .full-width {
+        grid-column: 1 / -1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Banner Header -->
+    <div class="container">
+      <header class="banner">
+        <div class="banner-content">
+          <div class="profile-info">
+            <h1 id="fullName">Nguyễn Văn An</h1>
+            <div class="subtitle">Sinh viên Công nghệ Thông tin</div>
+            <div class="description">Đam mê lập trình và công nghệ mới</div>
+          </div>
+          <div class="profile-image">
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face"
+              alt="Ảnh profile"
+              id="profileImg"
+            />
+          </div>
+        </div>
+      </header>
+
+      <!-- Navigation -->
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#personal" class="nav-link"
+              ><i class="fas fa-user"></i> Cá nhân</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#goals" class="nav-link"
+              ><i class="fas fa-target"></i> Mục tiêu</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link"
+              ><i class="fas fa-code"></i> Kỹ năng</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link"
+              ><i class="fas fa-project-diagram"></i> Dự án</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link"
+              ><i class="fas fa-envelope"></i> Liên hệ</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Thông tin cá nhân -->
+        <section class="section" id="personal">
+          <h2><i class="fas fa-user"></i> Thông tin cá nhân</h2>
+          <div class="personal-info">
+            <div class="info-item">
+              <i class="fas fa-calendar"></i>
+              <span
+                ><strong>Ngày sinh:</strong>
+                <span id="birthDate">15/03/2002</span></span
+              >
+            </div>
+            <div class="info-item">
+              <i class="fas fa-venus-mars"></i>
+              <span
+                ><strong>Giới tính:</strong> <span id="gender">Nam</span></span
+              >
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span
+                ><strong>Địa chỉ:</strong>
+                <span id="address">TP. Hồ Chí Minh</span></span
+              >
+            </div>
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <span
+                ><strong>Điện thoại:</strong>
+                <span id="phone">0123.456.789</span></span
+              >
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <span
+                ><strong>Email:</strong>
+                <span id="email">nguyenvanan@gmail.com</span></span
+              >
+            </div>
+          </div>
+          <button class="edit-btn" onclick="openEditModal()">
+            <i class="fas fa-edit"></i> Chỉnh sửa thông tin
+          </button>
+        </section>
+
+        <!-- Mục tiêu nghề nghiệp -->
+        <section class="section" id="goals">
+          <h2><i class="fas fa-target"></i> Mục tiêu nghề nghiệp</h2>
+          <p id="careerGoal">
+            Trở thành một lập trình viên Full-stack chuyên nghiệp, có khả năng
+            phát triển các ứng dụng web hiện đại và đóng góp vào các dự án công
+            nghệ có tác động tích cực đến cộng đồng.
+          </p>
+        </section>
+
+        <!-- Sở thích -->
+        <section class="section" id="hobbies">
+          <h2><i class="fas fa-heart"></i> Sở thích cá nhân</h2>
+          <div id="hobbiesList">
+            <p><i class="fas fa-code"></i> Lập trình và học công nghệ mới</p>
+            <p><i class="fas fa-gamepad"></i> Chơi game và thiết kế game</p>
+            <p><i class="fas fa-book"></i> Đọc sách về công nghệ</p>
+            <p><i class="fas fa-music"></i> Nghe nhạc và chơi guitar</p>
+          </div>
+        </section>
+
+        <!-- Ngôn ngữ -->
+        <section class="section" id="languages">
+          <h2><i class="fas fa-language"></i> Ngôn ngữ</h2>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Tiếng Việt</span>
+              <span>Bản ngữ</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 100%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Tiếng Anh</span>
+              <span>Trung cấp</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 70%"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Kỹ năng chuyên môn -->
+        <section class="section" id="skills">
+          <h2><i class="fas fa-code"></i> Kỹ năng chuyên môn</h2>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>HTML/CSS</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>JavaScript</span>
+              <span>80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Python</span>
+              <span>75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 75%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Java</span>
+              <span>70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 70%"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Chứng chỉ và giải thưởng -->
+        <section class="section" id="certificates">
+          <h2><i class="fas fa-award"></i> Chứng chỉ & Giải thưởng</h2>
+          <div id="certificatesList">
+            <div class="project-item">
+              <div class="project-title">Chứng chỉ HTML/CSS - FreeCodeCamp</div>
+              <p>Hoàn thành khóa học Responsive Web Design (2023)</p>
+            </div>
+            <div class="project-item">
+              <div class="project-title">
+                Giải Nhì Cuộc thi Lập trình Sinh viên
+              </div>
+              <p>Đại học ABC - Năm 2023</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Dự án cá nhân -->
+        <section class="section full-width" id="projects">
+          <h2><i class="fas fa-project-diagram"></i> Dự án cá nhân</h2>
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+              gap: 20px;
+            "
+          >
+            <div class="project-item">
+              <div class="project-title">Website Quản lý Thư viện</div>
+              <p>
+                <strong>Mô tả:</strong> Hệ thống quản lý sách, độc giả và mượn
+                trả sách cho thư viện trường học.
+              </p>
+              <p>
+                <strong>Công nghệ:</strong> HTML, CSS, JavaScript, PHP, MySQL
+              </p>
+              <p><strong>Vai trò:</strong> Full-stack Developer</p>
+            </div>
+            <div class="project-item">
+              <div class="project-title">Ứng dụng Quản lý Chi tiêu</div>
+              <p>
+                <strong>Mô tả:</strong> Ứng dụng mobile giúp người dùng theo dõi
+                và quản lý chi tiêu cá nhân.
+              </p>
+              <p><strong>Công nghệ:</strong> React Native, Firebase</p>
+              <p><strong>Vai trò:</strong> Mobile Developer</p>
+            </div>
+            <div class="project-item">
+              <div class="project-title">Game Puzzle 2D</div>
+              <p>
+                <strong>Mô tả:</strong> Game giải đố với đồ họa 2D và nhiều
+                level thử thách.
+              </p>
+              <p><strong>Công nghệ:</strong> Unity, C#</p>
+              <p><strong>Vai trò:</strong> Game Developer</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Thông tin liên hệ -->
+        <section class="section full-width" id="contact">
+          <h2><i class="fas fa-envelope"></i> Thông tin liên hệ</h2>
+          <div class="contact-links">
+            <a href="#" class="contact-link">
+              <i class="fab fa-facebook"></i> Facebook
+            </a>
+            <a href="#" class="contact-link">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="#" class="contact-link">
+              <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="#" class="contact-link">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="mailto:nguyenvanan@gmail.com" class="contact-link">
+              <i class="fas fa-envelope"></i> Email
+            </a>
+            <a href="tel:0123456789" class="contact-link">
+              <i class="fas fa-phone"></i> Điện thoại
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Modal chỉnh sửa thông tin -->
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeEditModal()">&times;</span>
+        <h2>Chỉnh sửa thông tin cá nhân</h2>
+        <form id="editForm">
+          <div class="form-group">
+            <label for="editFullName">Họ và tên:</label>
+            <input type="text" id="editFullName" name="fullName" />
+          </div>
+          <div class="form-group">
+            <label for="editBirthDate">Ngày sinh:</label>
+            <input type="text" id="editBirthDate" name="birthDate" />
+          </div>
+          <div class="form-group">
+            <label for="editGender">Giới tính:</label>
+            <select
+              id="editGender"
+              name="gender"
+              style="
+                width: 100%;
+                padding: 12px;
+                border: 2px solid #e0e0e0;
+                border-radius: 8px;
+              "
+            >
+              <option value="Nam">Nam</option>
+              <option value="Nữ">Nữ</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="editAddress">Địa chỉ:</label>
+            <input type="text" id="editAddress" name="address" />
+          </div>
+          <div class="form-group">
+            <label for="editPhone">Điện thoại:</label>
+            <input type="text" id="editPhone" name="phone" />
+          </div>
+          <div class="form-group">
+            <label for="editEmail">Email:</label>
+            <input type="email" id="editEmail" name="email" />
+          </div>
+          <div class="form-group">
+            <label for="editCareerGoal">Mục tiêu nghề nghiệp:</label>
+            <textarea id="editCareerGoal" name="careerGoal" rows="4"></textarea>
+          </div>
+          <button type="submit" class="save-btn">
+            <i class="fas fa-save"></i> Lưu thay đổi
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Dữ liệu cá nhân lưu trong bộ nhớ
+      let personalData = {
+        fullName: "Nguyễn Văn An",
+        birthDate: "15/03/2002",
+        gender: "Nam",
+        address: "TP. Hồ Chí Minh",
+        phone: "0123.456.789",
+        email: "nguyenvanan@gmail.com",
+        careerGoal:
+          "Trở thành một lập trình viên Full-stack chuyên nghiệp, có khả năng phát triển các ứng dụng web hiện đại và đóng góp vào các dự án công nghệ có tác động tích cực đến cộng đồng.",
+      };
+
+      // Hàm mở modal chỉnh sửa
+      function openEditModal() {
+        const modal = document.getElementById("editModal");
+
+        // Điền dữ liệu hiện tại vào form
+        document.getElementById("editFullName").value = personalData.fullName;
+        document.getElementById("editBirthDate").value = personalData.birthDate;
+        document.getElementById("editGender").value = personalData.gender;
+        document.getElementById("editAddress").value = personalData.address;
+        document.getElementById("editPhone").value = personalData.phone;
+        document.getElementById("editEmail").value = personalData.email;
+        document.getElementById("editCareerGoal").value =
+          personalData.careerGoal;
+
+        modal.style.display = "block";
+
+        // Thêm hiệu ứng fade in
+        setTimeout(() => {
+          modal.style.opacity = "1";
+        }, 10);
+      }
+
+      // Hàm đóng modal
+      function closeEditModal() {
+        const modal = document.getElementById("editModal");
+        modal.style.display = "none";
+      }
+
+      // Đóng modal khi click bên ngoài
+      window.onclick = function (event) {
+        const modal = document.getElementById("editModal");
+        if (event.target == modal) {
+          closeEditModal();
+        }
+      };
+
+      // Xử lý form submit
+      document
+        .getElementById("editForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Cập nhật dữ liệu
+          personalData.fullName = document.getElementById("editFullName").value;
+          personalData.birthDate =
+            document.getElementById("editBirthDate").value;
+          personalData.gender = document.getElementById("editGender").value;
+          personalData.address = document.getElementById("editAddress").value;
+          personalData.phone = document.getElementById("editPhone").value;
+          personalData.email = document.getElementById("editEmail").value;
+          personalData.careerGoal =
+            document.getElementById("editCareerGoal").value;
+
+          // Cập nhật giao diện
+          updateDisplay();
+
+          // Đóng modal
+          closeEditModal();
+
+          // Hiển thị thông báo thành công
+          showNotification("Thông tin đã được cập nhật thành công!");
+        });
+
+      // Hàm cập nhật hiển thị
+      function updateDisplay() {
+        document.getElementById("fullName").textContent = personalData.fullName;
+        document.getElementById("birthDate").textContent =
+          personalData.birthDate;
+        document.getElementById("gender").textContent = personalData.gender;
+        document.getElementById("address").textContent = personalData.address;
+        document.getElementById("phone").textContent = personalData.phone;
+        document.getElementById("email").textContent = personalData.email;
+        document.getElementById("careerGoal").textContent =
+          personalData.careerGoal;
+      }
+
+      // Hàm hiển thị thông báo
+      function showNotification(message) {
+        // Tạo element thông báo
+        const notification = document.createElement("div");
+        notification.innerHTML = `
+                <div style="
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: #28a745;
+                    color: white;
+                    padding: 15px 25px;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+                    z-index: 3000;
+                    animation: slideInRight 0.3s ease;
+                ">
+                    <i class="fas fa-check-circle"></i> ${message}
+                </div>
+            `;
+
+        document.body.appendChild(notification);
+
+        // Tự động xóa sau 3 giây
+        setTimeout(() => {
+          notification.style.animation = "slideOutRight 0.3s ease";
+          setTimeout(() => {
+            document.body.removeChild(notification);
+          }, 300);
+        }, 3000);
+      }
+
+      // Smooth scrolling cho navigation
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href").substring(1);
+          const targetElement = document.getElementById(targetId);
+
+          if (targetElement) {
+            const offsetTop = targetElement.offsetTop - 70; // Trừ height của navbar
+
+            window.scrollTo({
+              top: offsetTop,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Hiệu ứng parallax cho banner
+      window.addEventListener("scroll", function () {
+        const scrolled = window.pageYOffset;
+        const banner = document.querySelector(".banner");
+        const rate = scrolled * -0.5;
+
+        if (banner) {
+          banner.style.transform = `translateY(${rate}px)`;
+        }
+      });
+
+      // Animation khi scroll đến section
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.animation = "fadeInUp 0.6s ease-out";
+            entry.target.style.opacity = "1";
+          }
+        });
+      }, observerOptions);
+
+      // Quan sát tất cả các section
+      document.querySelectorAll(".section").forEach((section) => {
+        observer.observe(section);
+      });
+
+      // Hiệu ứng typing cho tiêu đề
+      function typeWriter(element, text, speed = 100) {
+        let i = 0;
+        element.textContent = "";
+
+        function typing() {
+          if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+            setTimeout(typing, speed);
+          }
+        }
+        typing();
+      }
+
+      // Khởi động hiệu ứng typing khi load trang
+      window.addEventListener("load", function () {
+        const nameElement = document.getElementById("fullName");
+        const originalText = nameElement.textContent;
+        typeWriter(nameElement, originalText, 100);
+
+        // Animate skill bars
+        setTimeout(() => {
+          document.querySelectorAll(".skill-progress").forEach((bar) => {
+            const width = bar.style.width;
+            bar.style.width = "0";
+            setTimeout(() => {
+              bar.style.width = width;
+            }, 500);
+          });
+        }, 1000);
+      });
+
+      // Thêm hiệu ứng hover cho các section
+      document.querySelectorAll(".section").forEach((section) => {
+        section.addEventListener("mouseenter", function () {
+          this.style.transform = "translateY(-5px) scale(1.02)";
+        });
+
+        section.addEventListener("mouseleave", function () {
+          this.style.transform = "translateY(0) scale(1)";
+        });
+      });
+
+      // Easter egg: Double click vào ảnh profile để thay đổi
+      document
+        .getElementById("profileImg")
+        .addEventListener("dblclick", function () {
+          const images = [
+            "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",
+            "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face",
+            "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face",
+            "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=200&h=200&fit=crop&crop=face",
+          ];
+
+          const randomImage = images[Math.floor(Math.random() * images.length)];
+          this.src = randomImage;
+
+          showNotification("Ảnh đại diện đã được thay đổi!");
+        });
+
+      // Thêm CSS animations bổ sung
+      const additionalStyles = `
+            @keyframes slideInRight {
+                from {
+                    opacity: 0;
+                    transform: translateX(100px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+            
+            @keyframes slideOutRight {
+                from {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+                to {
+                    opacity: 0;
+                    transform: translateX(100px);
+                }
+            }
+            
+            .section {
+                transition: all 0.3s ease;
+            }
+            
+            .nav-link.active {
+                background: #34495e;
+                color: #fff;
+            }
+        `;
+
+      // Thêm styles vào head
+      const styleSheet = document.createElement("style");
+      styleSheet.textContent = additionalStyles;
+      document.head.appendChild(styleSheet);
+
+      // Highlight active navigation
+      window.addEventListener("scroll", function () {
+        const sections = document.querySelectorAll(".section");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (scrollY >= sectionTop - 200) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+          }
+        });
+      });
+
+      // Console easter egg
+      console.log(`
+    ╔══════════════════════════════════════╗
+    ║        🎉 CV Cá Nhân v1.0 🎉        ║
+    ║                                      ║
+    ║   Được tạo bởi: Claude (Anthropic)   ║
+    ║   Thiết kế: Modern & Responsive      ║
+    ║   Công nghệ: HTML5, CSS3, JS        ║
+    ║                                      ║
+    ║   💡 Tips:                           ║
+    ║   - Double click vào ảnh profile     ║
+    ║   - Sử dụng nút "Chỉnh sửa"         ║
+    ║   - Scroll để xem animations         ║
+    ╚══════════════════════════════════════╝
+        `);
+    </script>
+
+    <!-- CSS bổ sung cho animations -->
+    <style>
+      /* Thêm animation cho notification */
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slideOutRight {
+        from {
+          opacity: 1;
+          transform: translateX(0);
+        }
+        to {
+          opacity: 0;
+          transform: translateX(100px);
+        }
+      }
+
+      /* Cải thiện responsive cho mobile */
+      @media (max-width: 480px) {
+        .banner-content {
+          padding: 0 15px;
+        }
+
+        .profile-info h1 {
+          font-size: 1.8em;
+        }
+
+        .main-content {
+          padding: 15px;
+          gap: 20px;
+        }
+
+        .section {
+          padding: 20px;
+        }
+
+        .modal-content {
+          width: 95%;
+          margin: 10% auto;
+          padding: 20px;
+        }
+
+        .contact-links {
+          gap: 10px;
+        }
+
+        .contact-link {
+          padding: 8px 12px;
+          font-size: 14px;
+        }
+      }
+
+      /* Hiệu ứng loading cho skill bars */
+      .skill-progress {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .skill-progress::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-image: linear-gradient(
+          -45deg,
+          rgba(255, 255, 255, 0.2) 25%,
+          transparent 25%,
+          transparent 50%,
+          rgba(255, 255, 255, 0.2) 50%,
+          rgba(255, 255, 255, 0.2) 75%,
+          transparent 75%,
+          transparent
+        );
+        background-size: 50px 50px;
+        animation: skillShine 2s linear infinite;
+      }
+
+      @keyframes skillShine {
+        0% {
+          transform: translateX(-50px);
+        }
+        100% {
+          transform: translateX(50px);
+        }
+      }
+
+      /* Cải thiện hiệu ứng hover */
+      .project-item {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .project-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(102, 126, 234, 0.1),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+
+      .project-item:hover::before {
+        left: 100%;
+      }
+
+      /* Dark mode toggle (bonus feature) */
+      .theme-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #667eea;
+        color: white;
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+
+      .theme-toggle:hover {
+        transform: scale(1.1);
+        background: #5a6fd8;
+      }
+    </style>
+
+    <!-- Theme toggle button -->
+    <button
+      class="theme-toggle"
+      onclick="toggleTheme()"
+      title="Chuyển đổi theme"
+    >
+      <i class="fas fa-moon" id="themeIcon"></i>
+    </button>
+
+    <script>
+      // Theme toggle functionality
+      let isDarkMode = false;
+
+      function toggleTheme() {
+        isDarkMode = !isDarkMode;
+        const body = document.body;
+        const themeIcon = document.getElementById("themeIcon");
+
+        if (isDarkMode) {
+          body.style.filter = "invert(1) hue-rotate(180deg)";
+          body.style.transition = "filter 0.3s ease";
+          themeIcon.className = "fas fa-sun";
+        } else {
+          body.style.filter = "none";
+          themeIcon.className = "fas fa-moon";
+        }
+      }
+    </script>
+  </body>
+</html>
