@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CV Cá Nhân - Nguyễn Văn An</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <div class="logo">Nguyễn Văn An</div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="#personal" class="nav-link">Cá nhân</a></li>
+            <li><a href="#goals" class="nav-link">Mục tiêu</a></li>
+            <li><a href="#skills" class="nav-link">Kỹ năng</a></li>
+            <li><a href="#projects" class="nav-link">Dự án</a></li>
+            <li><a href="#contact" class="nav-link">Liên hệ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Hero Section -->
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <div class="profile-info">
+            <h1 class="headline" id="fullName">Nguyễn Văn An</h1>
+            <p class="subtitle">Sinh viên Công nghệ Thông tin</p>
+            <p class="description">Đam mê lập trình và công nghệ mới</p>
+            <button class="btn cta-btn" onclick="openEditModal()">
+              Chỉnh sửa thông tin
+            </button>
+          </div>
+          <div class="profile-image">
+            <img
+              src="assets/images/profile.jpg"
+              alt="Ảnh profile"
+              id="profileImg"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Sections -->
+      <section
+        class="section"
+        id="personal"
+        tabindex="0"
+        aria-label="Thông tin cá nhân"
+      >
+        <h2 class="section-title">
+          <i class="fas fa-user"></i> Thông tin cá nhân
+        </h2>
+        <div class="info-list">
+          <div class="info-item">
+            <strong>Ngày sinh:</strong> <span id="birthDate">15/03/2002</span>
+          </div>
+          <div class="info-item">
+            <strong>Giới tính:</strong> <span id="gender">Nam</span>
+          </div>
+          <div class="info-item">
+            <strong>Địa chỉ:</strong> <span id="address">TP. Hồ Chí Minh</span>
+          </div>
+          <div class="info-item">
+            <strong>Điện thoại:</strong> <span id="phone">0123.456.789</span>
+          </div>
+          <div class="info-item">
+            <strong>Email:</strong>
+            <span id="email">nguyenvanan@gmail.com</span>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section"
+        id="goals"
+        tabindex="0"
+        aria-label="Mục tiêu nghề nghiệp"
+      >
+        <h2 class="section-title">
+          <i class="fas fa-target"></i> Mục tiêu nghề nghiệp
+        </h2>
+        <p id="careerGoal">
+          Trở thành một lập trình viên Full-stack chuyên nghiệp, có khả năng
+          phát triển các ứng dụng web hiện đại và đóng góp vào các dự án công
+          nghệ có tác động tích cực đến cộng đồng.
+        </p>
+      </section>
+
+      <section
+        class="section"
+        id="skills"
+        tabindex="0"
+        aria-label="Kỹ năng chuyên môn"
+      >
+        <h2 class="section-title">
+          <i class="fas fa-code"></i> Kỹ năng chuyên môn
+        </h2>
+        <div class="skill-list">
+          <div class="skill-item">
+            <div class="skill-name">HTML/CSS <span>85%</span></div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">JavaScript <span>80%</span></div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">Python <span>75%</span></div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 75%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">Java <span>70%</span></div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 70%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section"
+        id="projects"
+        tabindex="0"
+        aria-label="Dự án cá nhân"
+      >
+        <h2 class="section-title">
+          <i class="fas fa-project-diagram"></i> Dự án cá nhân
+        </h2>
+        <div class="project-list">
+          <article class="project-item">
+            <h3 class="project-title">Website Quản lý Thư viện</h3>
+            <p>
+              <strong>Mô tả:</strong> Hệ thống quản lý sách, độc giả và mượn trả
+              sách cho thư viện trường học.
+            </p>
+            <p><strong>Công nghệ:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
+            <p><strong>Vai trò:</strong> Full-stack Developer</p>
+          </article>
+          <article class="project-item">
+            <h3 class="project-title">Ứng dụng Quản lý Chi tiêu</h3>
+            <p>
+              <strong>Mô tả:</strong> Ứng dụng mobile giúp người dùng theo dõi
+              và quản lý chi tiêu cá nhân.
+            </p>
+            <p><strong>Công nghệ:</strong> React Native, Firebase</p>
+            <p><strong>Vai trò:</strong> Mobile Developer</p>
+          </article>
+          <article class="project-item">
+            <h3 class="project-title">Game Puzzle 2D</h3>
+            <p>
+              <strong>Mô tả:</strong> Game giải đố với đồ họa 2D và nhiều level
+              thử thách.
+            </p>
+            <p><strong>Công nghệ:</strong> Unity, C#</p>
+            <p><strong>Vai trò:</strong> Game Developer</p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="section"
+        id="contact"
+        tabindex="0"
+        aria-label="Thông tin liên hệ"
+      >
+        <h2 class="section-title">
+          <i class="fas fa-envelope"></i> Thông tin liên hệ
+        </h2>
+        <nav class="contact-links" aria-label="Liên kết liên hệ">
+          <a href="#" class="contact-link" aria-label="Facebook"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="#" class="contact-link" aria-label="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="#" class="contact-link" aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" class="contact-link" aria-label="LinkedIn"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="mailto:nguyenvanan@gmail.com"
+            class="contact-link"
+            aria-label="Email"
+            ><i class="fas fa-envelope"></i
+          ></a>
+          <a href="tel:0123456789" class="contact-link" aria-label="Điện thoại"
+            ><i class="fas fa-phone"></i
+          ></a>
+        </nav>
+      </section>
+    </main>
+
+    <!-- Edit Modal -->
+    <div
+      id="editModal"
+      class="modal"
+      aria-hidden="true"
+      role="dialog"
+      aria-labelledby="editModalTitle"
+      aria-modal="true"
+    >
+      <div class="modal-content">
+        <button
+          class="modal-close"
+          aria-label="Đóng cửa sổ"
+          onclick="closeEditModal()"
+        >
+          &times;
+        </button>
+        <h2 id="editModalTitle">Chỉnh sửa thông tin cá nhân</h2>
+        <form id="editForm" novalidate>
+          <label for="editFullName">Họ và tên:</label>
+          <input type="text" id="editFullName" name="fullName" />
+
+          <label for="editBirthDate">Ngày sinh:</label>
+          <input type="text" id="editBirthDate" name="birthDate" />
+
+          <label for="editGender">Giới tính:</label>
+          <select id="editGender" name="gender">
+            <option value="Nam">Nam</option>
+            <option value="Nữ">Nữ</option>
+          </select>
+
+          <label for="editAddress">Địa chỉ:</label>
+          <input type="text" id="editAddress" name="address" />
+
+          <label for="editPhone">Điện thoại:</label>
+          <input type="text" id="editPhone" name="phone" />
+
+          <label for="editEmail">Email:</label>
+          <input type="email" id="editEmail" name="email" />
+
+          <label for="editCareerGoal">Mục tiêu nghề nghiệp:</label>
+          <textarea id="editCareerGoal" name="careerGoal" rows="4"></textarea>
+
+          <button type="submit" class="btn save-btn">
+            <i class="fas fa-save"></i> Lưu thay đổi
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
