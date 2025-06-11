@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Cá Nhân - Nguyễn Văn An</title>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+  </head>
+  <body>
+    <!-- Header Banner -->
+    <div class="container">
+      <header class="banner" id="home">
+        <div class="banner-content">
+          <div class="profile-info">
+            <h1 id="fullName" class="typing-text">Nguyễn Văn An</h1>
+            <div class="subtitle">Sinh viên Công nghệ Thông tin</div>
+            <div class="description">Đam mê lập trình và công nghệ mới</div>
+            <div class="social-links">
+              <a href="#" class="social-link" title="Facebook">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#" class="social-link" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" class="social-link" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          <div class="profile-image-container">
+            <div class="profile-image">
+              <img
+                src="assets/images/profile.jpg"
+                alt="Ảnh profile"
+                id="profileImg"
+              />
+            </div>
+            <div class="image-overlay">
+              <i class="fas fa-camera"></i>
+              <p>Double click để thay đổi</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+          <div class="scroll-arrow">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+      </header>
+
+      <!-- Navigation -->
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <i class="fas fa-user-circle"></i>
+            <span>CV</span>
+          </div>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#home" class="nav-link active">
+                <i class="fas fa-home"></i>
+                <span>Trang chủ</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#personal" class="nav-link">
+                <i class="fas fa-user"></i>
+                <span>Cá nhân</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#goals" class="nav-link">
+                <i class="fas fa-target"></i>
+                <span>Mục tiêu</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#skills" class="nav-link">
+                <i class="fas fa-code"></i>
+                <span>Kỹ năng</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#projects" class="nav-link">
+                <i class="fas fa-project-diagram"></i>
+                <span>Dự án</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">
+                <i class="fas fa-envelope"></i>
+                <span>Liên hệ</span>
+              </a>
+            </li>
+          </ul>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Thông tin cá nhân -->
+        <section class="section" id="personal">
+          <div class="section-header">
+            <h2><i class="fas fa-user"></i> Thông tin cá nhân</h2>
+            <div class="section-line"></div>
+          </div>
+          <div class="section-content">
+            <div class="personal-info">
+              <div class="info-grid">
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="fas fa-calendar"></i>
+                  </div>
+                  <div class="info-content">
+                    <span class="info-label">Ngày sinh</span>
+                    <span class="info-value" id="birthDate">15/03/2002</span>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="fas fa-venus-mars"></i>
+                  </div>
+                  <div class="info-content">
+                    <span class="info-label">Giới tính</span>
+                    <span class="info-value" id="gender">Nam</span>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="info-content">
+                    <span class="info-label">Địa chỉ</span>
+                    <span class="info-value" id="address">TP. Hồ Chí Minh</span>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <div class="info-content">
+                    <span class="info-label">Điện thoại</span>
+                    <span class="info-value" id="phone">0123.456.789</span>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="info-content">
+                    <span class="info-label">Email</span>
+                    <span class="info-value" id="email"
+                      >nguyenvanan@gmail.com</span
+                    >
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                  </div>
+                  <div class="info-content">
+                    <span class="info-label">Trường</span>
+                    <span class="info-value" id="school">Đại học ABC</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="edit-btn" onclick="openEditModal()">
+              <i class="fas fa-edit"></i> Chỉnh sửa thông tin
+            </button>
+          </div>
+        </section>
+
+        <!-- Mục tiêu nghề nghiệp -->
+        <section class="section" id="goals">
+          <div class="section-header">
+            <h2><i class="fas fa-target"></i> Mục tiêu nghề nghiệp</h2>
+            <div class="section-line"></div>
+          </div>
+          <div class="section-content">
+            <div class="goal-content">
+              <p id="careerGoal">
+                Trở thành một lập trình viên Full-stack chuyên nghiệp, có khả
+                năng phát triển các ứng dụng web hiện đại và đóng góp vào các dự
+                án công nghệ có tác động tích cực đến cộng đồng.
+              </p>
+              <div class="goal-highlights">
+                <div class="highlight-item">
+                  <i class="fas fa-rocket"></i>
+                  <span>Học hỏi công nghệ mới</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-users"></i>
+                  <span>Làm việc nhóm hiệu quả</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-lightbulb"></i>
+                  <span>Sáng tạo giải pháp</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sở thích -->
+        <section class="section" id="hobbies">
+          <div class="section-header">
+            <h2><i class="fas fa-heart"></i> Sở thích cá nhân</h2>
+            <div class="section-line"></div>
+          </div>
+          <div class="section-content">
+            <div class="hobbies-grid">
+              <div class="hobby-item">
+                <div class="hobby-icon">
+                  <i class="fas fa-code"></i>
+                </div>
+                <h3>Lập trình</h3>
+                <p>Đam mê học các ngôn ngữ và framework mới</p>
+              </div>
+              <div class="hobby-item">
+                <div class="hobby-icon">
+                  <i class="fas fa-gamepad"></i>
+                </div>
+                <h3>Gaming</h3>
+                <p>Chơi game và nghiên cứu game development</p>
+              </div>
+              <div class="hobby-item">
+                <div class="hobby-icon">
+                  <i class="fas fa-book"></i>
+                </div>
+                <h3>Đọc sách</h3>
+                <p>Tìm hiểu về công nghệ và phát triển bản thân</p>
+              </div>
+              <div class="hobby-item">
+                <div class="hobby-icon">
+                  <i class="fas fa-music"></i>
+                </div>
+                <h3>Âm nhạc</h3>
+                <p>Nghe nhạc và chơi guitar trong thời gian rảnh</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Ngôn ngữ và Kỹ năng -->
+        <section class="section" id="skills">
+          <div class="section-header">
+            <h2><i class="fas fa-code"></i> Kỹ năng & Ngôn ngữ</h2>
+            <div class="section-line"></div>
+          </div>
+          <div class="section-content">
+            <div class="skills-container">
+              <!-- Kỹ năng lập trình -->
+              <div class="skill-category">
+                <h3><i class="fas fa-laptop-code"></i> Kỹ năng lập trình</h3>
+                <div class="skills-list">
+                  <div class="skill-item">
+                    <div class="skill-info">
+                      <span class="skill-name">HTML/CSS</span>
+                      <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" data-width="85%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-info">
+                      <span class="skill-name">JavaScript</span>
+                      <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" data-width="80%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-info">
+                      <span class="skill-name">Python</span>
+                      <span class="skill-percentage">75%</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" data-width="75%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-info">
+                      <span class="skill-name">Java</span>
+                      <span class="skill-percentage">70%</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" data-width="70%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Ngôn ngữ -->
+              <div class="skill-category">
+                <h3><i class="fas fa-language"></i> Ngôn ngữ</h3>
+                <div class="skills-list">
+                  <div class="skill-item">
+                    <div class="skill-info">
+                      <span class="skill-name">Tiếng Việt</span>
+                      <span class="skill-percentage">Bản ngữ</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" data-width="100%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-info">
+                      <span class="skill-name">Tiếng Anh</span>
+                      <span class="skill-percentage">Trung cấp</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" data-width="70%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Chứng chỉ và Giải thưởng -->
+        <section class="section" id="certificates">
+          <div class="section-header">
+            <h2><i class="fas fa-award"></i> Chứng chỉ & Giải thưởng</h2>
+            <div class="section-line"></div>
+          </div>
+          <div class="section-content">
+            <div class="certificates-grid">
+              <div class="certificate-item">
+                <div class="certificate-icon">
+                  <i class="fas fa-certificate"></i>
+                </div>
+                <div class="certificate-content">
+                  <h3>Chứng chỉ HTML/CSS</h3>
+                  <p class="certificate-org">FreeCodeCamp</p>
+                  <p class="certificate-date">2023</p>
+                  <p class="certificate-desc">
+                    Hoàn thành khóa học Responsive Web Design
+                  </p>
+                </div>
+              </div>
+              <div class="certificate-item">
+                <div class="certificate-icon">
+                  <i class="fas fa-trophy"></i>
+                </div>
+                <div class="certificate-content">
+                  <h3>Giải Nhì Cuộc thi Lập trình</h3>
+                  <p class="certificate-org">Đại học ABC</p>
+                  <p class="certificate-date">2023</p>
+                  <p class="certificate-desc">
+                    Cuộc thi Lập trình Sinh viên cấp trường
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Dự án cá nhân -->
+        <section class="section full-width" id="projects">
+          <div class="section-header">
+            <h2><i class="fas fa-project-diagram"></i> Dự án cá nhân</h2>
+            <div class="section-line"></div>
+          </div>
+          <div class="section-content">
+            <div class="projects-grid">
+              <div class="project-card">
+                <div class="project-image">
+                  <img
+                    src="assets/images/project1.jpg"
+                    alt="Website Quản lý Thư viện"
+                  />
+                  <div class="project-overlay">
+                    <div class="project-links">
+                      <a href="#" class="project-link" title="Xem demo">
+                        <i class="fas fa-eye"></i>
+                      </a>
+                      <a href="#" class="project-link" title="Source code">
+                        <i class="fab fa-github"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <h3>Website Quản lý Thư viện</h3>
+                  <p class="project-description">
+                    Hệ thống quản lý sách, độc giả và mượn trả sách cho thư viện
+                    trường học với giao diện thân thiện và dễ sử dụng.
+                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">PHP</span>
+                    <span class="tech-tag">MySQL</span>
+                  </div>
+                  <div class="project-role">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Vai trò: Full-stack Developer</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-image">
+                  <img
+                    src="assets/images/project2.jpg"
+                    alt="Ứng dụng Quản lý Chi tiêu"
+                  />
+                  <div class="project-overlay">
+                    <div class="project-links">
+                      <a href="#" class="project-link" title="Xem demo">
+                        <i class="fas fa-eye"></i>
+                      </a>
+                      <a href="#" class="project-link" title="Source code">
+                        <i class="fab fa-github"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <h3>Ứng dụng Quản lý Chi tiêu</h3>
+                  <p class="project-description">
+                    Ứng dụng mobile giúp người dùng theo dõi và quản lý chi tiêu
+                    cá nhân với tính năng thống kê và báo cáo chi tiết.
+                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag">React Native</span>
+                    <span class="tech-tag">Firebase</span>
+                    <span class="tech-tag">Chart.js</span>
+                  </div>
+                  <div class="project-role">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Vai trò: Mobile Developer</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="assets/images/project3.jpg" alt="Game Puzzle 2D" />
+                  <div class="project-overlay">
+                    <div class="project-links">
+                      <a href="#" class="project-link" title="Xem demo">
+                        <i class="fas fa-eye"></i>
+                      </a>
+                      <a href="#" class="project-link" title="Source code">
+                        <i class="fab fa-github"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <h3>Game Puzzle 2D</h3>
+                  <p class="project-description">
+                    Game giải đố với đồ họa 2D và nhiều level thử thách, tích
+                    hợp hệ thống điểm số và leaderboard.
+                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag">Unity</span>
+                    <span class="tech-tag">C#</span>
+                    <span class="tech-tag">Photoshop</span>
+                  </div>
+                  <div class="project-role">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Vai trò: Game Developer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Thông tin liên hệ -->
+        <section class="section full-width" id="contact">
+          <div class="section-header">
+            <h2><i class="fas fa-envelope"></i> Thông tin liên hệ</h2>
+            <div class="section-line"></div>
+          </div>
+          <div class="section-content">
+            <div class="contact-container">
+              <div class="contact-info">
+                <h3>Liên hệ với tôi</h3>
+                <p>
+                  Tôi luôn sẵn sàng kết nối và thảo luận về các cơ hội hợp tác
+                  mới!
+                </p>
+
+                <div class="contact-details">
+                  <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                      <span>Email</span>
+                      <a href="mailto:nguyenvanan@gmail.com"
+                        >nguyenvanan@gmail.com</a
+                      >
+                    </div>
+                  </div>
+                  <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                      <span>Điện thoại</span>
+                      <a href="tel:0123456789">0123.456.789</a>
+                    </div>
+                  </div>
+                  <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                      <span>Địa chỉ</span>
+                      <p>TP. Hồ Chí Minh, Việt Nam</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="social-media">
+                  <h4>Mạng xã hội</h4>
+                  <div class="social-links-grid">
+                    <a href="#" class="social-link-card facebook">
+                      <i class="fab fa-facebook"></i>
+                      <span>Facebook</span>
+                    </a>
+                    <a href="#" class="social-link-card github">
+                      <i class="fab fa-github"></i>
+                      <span>GitHub</span>
+                    </a>
+                    <a href="#" class="social-link-card instagram">
+                      <i class="fab fa-instagram"></i>
+                      <span>Instagram</span>
+                    </a>
+                    <a href="#" class="social-link-card linkedin">
+                      <i class="fab fa-linkedin"></i>
+                      <span>LinkedIn</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-form">
+                <h3>Gửi tin nhắn</h3>
+                <form id="contactForm">
+                  <div class="form-group">
+                    <label for="contactName">Họ và tên</label>
+                    <input type="text" id="contactName" name="name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="contactEmail">Email</label>
+                    <input
+                      type="email"
+                      id="contactEmail"
+                      name="email"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="contactSubject">Chủ đề</label>
+                    <input
+                      type="text"
+                      id="contactSubject"
+                      name="subject"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="contactMessage">Tin nhắn</label>
+                    <textarea
+                      id="contactMessage"
+                      name="message"
+                      rows="5"
+                      required
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    Gửi tin nhắn
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-content">
+          <p>&copy; 2024 Nguyễn Văn An. All rights reserved.</p>
+          <p>
+            Made with <i class="fas fa-heart"></i> and
+            <i class="fas fa-code"></i>
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Modal chỉnh sửa thông tin -->
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Chỉnh sửa thông tin cá nhân</h2>
+          <span class="close" onclick="closeEditModal()">&times;</span>
+        </div>
+        <form id="editForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="editFullName">Họ và tên</label>
+              <input type="text" id="editFullName" name="fullName" />
+            </div>
+            <div class="form-group">
+              <label for="editBirthDate">Ngày sinh</label>
+              <input type="text" id="editBirthDate" name="birthDate" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="editGender">Giới tính</label>
+              <select id="editGender" name="gender">
+                <option value="Nam">Nam</option>
+                <option value="Nữ">Nữ</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="editPhone">Điện thoại</label>
+              <input type="text" id="editPhone" name="phone" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="editAddress">Địa chỉ</label>
+            <input type="text" id="editAddress" name="address" />
+          </div>
+          <div class="form-group">
+            <label for="editEmail">Email</label>
+            <input type="email" id="editEmail" name="email" />
+          </div>
+          <div class="form-group">
+            <label for="editSchool">Trường học</label>
+            <input type="text" id="editSchool" name="school" />
+          </div>
+          <div class="form-group">
+            <label for="editCareerGoal">Mục tiêu nghề nghiệp</label>
+            <textarea id="editCareerGoal" name="careerGoal" rows="4"></textarea>
+          </div>
+          <div class="modal-actions">
+            <button type="button" class="cancel-btn" onclick="closeEditModal()">
+              Hủy
+            </button>
+            <button type="submit" class="save-btn">
+              <i class="fas fa-save"></i> Lưu thay đổi
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Floating buttons -->
+    <div class="floating-buttons">
+      <button
+        class="theme-toggle"
+        onclick="toggleTheme()"
+        title="Chuyển đổi theme"
+      >
+        <i class="fas fa-moon" id="themeIcon"></i>
+      </button>
+      <button
+        class="scroll-to-top"
+        onclick="scrollToTop()"
+        title="Lên đầu trang"
+      >
+        <i class="fas fa-arrow-up"></i>
+      </button>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="cv_script.js"></script>
+  </body>
+</html>
